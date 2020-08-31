@@ -1,5 +1,3 @@
-﻿#param([String] $remoteHost =$(throw "Please specify the Target Server"),[String] $domain = $(throw "Please specify the #recipient Domain"),[String] $sendingdomain = $(throw "Please specify the Sending Domain"))
-
 # Set Hostname
 [void][Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic')
 $title = 'Hostname'
@@ -18,8 +16,6 @@ $title = 'To Address'
 $msg   = 'Enter To Address:'
 $domain = [Microsoft.VisualBasic.Interaction]::InputBox($msg, $title)
 
-
-#param([String] $remoteHost,[String] $domain, [String] $sendingdomain)
 
 $Fromdomain = $domain -split '@'
 
